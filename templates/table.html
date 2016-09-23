@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Occupation </title>
+</head>
+<body><center>
+<table><tr><th>Occupation</th><th>Percentage</th></tr>
+{%- for item in l %}
+<tr>
+{%- for data in item %}
+<td>
+{{ data }}
+</td>
+{%- endfor%}
+</tr>
+{%- endfor %}
+</table>
+
+<b> {{job}} </b>
+</center></body>
+
+
+</html>
