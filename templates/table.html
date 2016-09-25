@@ -4,19 +4,21 @@
 <title> Occupation </title>
 </head>
 <body><center>
-<table><tr><th>Occupation</th><th>Percentage</th></tr>
+<table border=1><tr><th>Occupation</th><th>Percentage</th><th>Link</th></tr>
 {%- for item in l %}
 <tr>
 {%- for data in item %}
-<td>
+<td><center>
 {{ data }}
-</td>
+</center></td>
 {%- endfor%}
 </tr>
 {%- endfor %}
 </table>
-
-<b> {{job}} </b>
+<br>
+<b> {{ job }} </b>
+<br><br>
+<b>{{ per }}</b>
 </center></body>
 
 
