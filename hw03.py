@@ -25,13 +25,16 @@ def jobPicker():
 
 @hw03.route("/")
 def welcome():
-    return "Welcome to random job picker"
+    return render_template("welcome.html")
 
 @hw03.route("/occupations")
 def generate():
     j = jobPicker()
     return render_template("table.html", l=joblist, job=j, per=num)
 
+@hw03.route("/iwantyou")
+def pic():
+    return render_template("IWantYou.html")
 
 if __name__ == "__main__":
     hw03.debug = True

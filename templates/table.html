@@ -4,21 +4,24 @@
 <title> Occupation </title>
 </head>
 <body><center>
-<table border=1><tr><th>Occupation</th><th>Percentage</th><th>Link</th></tr>
+<table border=1><tr><th>Occupation</th><th>Percentage</th></tr>
 {%- for item in l %}
 <tr>
-{%- for data in item %}
+{%- for num in range(0,2) %}
 <td><center>
-{{ data }}
-</center></td>
+{%- if num == 0: %}
+<a href= "{{item[2]}}">{{item[num]}}</a>
+{% else: %}
+{{ item[num] }}
+{% endif %}
+</center>
+</td>
 {%- endfor%}
 </tr>
 {%- endfor %}
 </table>
 <br>
-<b> {{ job }} </b>
-<br><br>
-<b>{{ per }}</b>
+<b><a href="http://127.0.0.1:5000/iwantyou"> {{ job }} </a> </b>
 </center></body>
 
 
